@@ -13,14 +13,16 @@ class ContactoController
         require_once 'views/contacto/mostrar_todos.php';
     }
 
-    public function crear()
+    /* public function crear()
     {
         
-    }
-
-    /* public function borrar(){
-
     } */
+
+    public function borrar(){
+        $contacto = new Contacto();
+        $contacto_borrar = $contacto->borrar();
+        require_once 'views/contacto/borrar.php';
+    } 
 
     /* public function modificar(){
 

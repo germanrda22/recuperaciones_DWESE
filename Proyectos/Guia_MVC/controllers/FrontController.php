@@ -29,7 +29,8 @@ class FrontController{
             }
         }else
         {
-            echo "<a href='http://localhost/recuperacion_DWESE/Proyectos/Guia_MVC/?controller=Contacto&action=mostrarTodos'>Mostrar Todos</a>";
+            echo "<a href='http://localhost/recuperacion_DWESE/Proyectos/Guia_MVC/?controller=Contacto&action=mostrarTodos'>Mostrar Todos</a><br>";
+            echo "<a href='http://localhost/recuperacion_DWESE/Proyectos/Guia_MVC/?controller=Contacto&action=borrar'>Borrar</a>";
         }
     }
 }
