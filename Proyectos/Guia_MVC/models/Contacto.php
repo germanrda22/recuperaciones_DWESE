@@ -2,6 +2,8 @@
 
 namespace Models;
 
+use JetBrains\PhpStorm\Internal\ReturnTypeContract;
+
 class Contacto
 {
         private string $id;
@@ -162,6 +164,11 @@ class Contacto
         public function conseguirTodos() : string
         {   
             return "Aquí mostraremos todos los contactos de nuestra agenda";
+        }
+
+        public function borrar() : string
+        {
+                return "Se han borrado todos los contactos de tu agenda";
         }
 
 }
