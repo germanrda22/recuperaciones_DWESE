@@ -10,14 +10,18 @@
     <h1>Agenda</h1>
     <?php
 
-require_once 'autoload.php';
-use Controllers\ContactoController;
-use Models\Contacto;
+        require_once 'autoload.php';
+        require_once 'controllers/FrontController.php';
+        use Controllers\FrontController;
 
-$controlador = new ContactoController();
-$controlador->mostrarTodos();
 
-?>
+        FrontController::main();
+        // $controlador = new ContactoController();
+        // Llamar de forma dinámica a ContactoController poniendo en la URL /?action=mostrarTodos
 
+    ?>
+    <?php
+        require_once 'views/footer.php';
+    ?>
 </body>
 </html>
