@@ -2,26 +2,22 @@
 
 namespace Models;
 
-class Contacto{
-    function __construct(
-        private string $id,
-        private string $nombre,
-        private string $apellidos,
-        private string $correo,
-        private string $direccion,
-        private string $telefono,
-        private ?string $fecha_nacimiento
-    )
-    {
-        
-    }
+class Contacto
+{
+        private string $id;
+        private string $nombre;
+        private string $apellidos;
+        private string $correo;
+        private string $direccion;
+        private string $telefono;
+        private ?string $fecha_nacimiento;
 
     
 
         /**
          * Get the value of id
          */ 
-        public function getId()
+        public function getId(): int
         {
                 return $this->id;
         }
@@ -31,7 +27,7 @@ class Contacto{
          *
          * @return  self
          */ 
-        public function setId($id)
+        public function setId(int $id)
         {
                 $this->id = $id;
 
@@ -41,7 +37,7 @@ class Contacto{
         /**
          * Get the value of nombre
          */ 
-        public function getNombre()
+        public function getNombre(): string
         {
                 return $this->nombre;
         }
@@ -51,7 +47,7 @@ class Contacto{
          *
          * @return  self
          */ 
-        public function setNombre($nombre)
+        public function setNombre(string $nombre)
         {
                 $this->nombre = $nombre;
 
@@ -61,7 +57,7 @@ class Contacto{
         /**
          * Get the value of apellidos
          */ 
-        public function getApellidos()
+        public function getApellidos(): string
         {
                 return $this->apellidos;
         }
@@ -71,7 +67,7 @@ class Contacto{
          *
          * @return  self
          */ 
-        public function setApellidos($apellidos)
+        public function setApellidos(string $apellidos)
         {
                 $this->apellidos = $apellidos;
 
@@ -81,7 +77,7 @@ class Contacto{
         /**
          * Get the value of correo
          */ 
-        public function getCorreo()
+        public function getCorreo(): string
         {
                 return $this->correo;
         }
@@ -91,7 +87,7 @@ class Contacto{
          *
          * @return  self
          */ 
-        public function setCorreo($correo)
+        public function setCorreo(string $correo)
         {
                 $this->correo = $correo;
 
@@ -101,7 +97,7 @@ class Contacto{
         /**
          * Get the value of direccion
          */ 
-        public function getDireccion()
+        public function getDireccion(): string
         {
                 return $this->direccion;
         }
@@ -111,7 +107,7 @@ class Contacto{
          *
          * @return  self
          */ 
-        public function setDireccion($direccion)
+        public function setDireccion(string $direccion)
         {
                 $this->direccion = $direccion;
 
@@ -121,7 +117,7 @@ class Contacto{
         /**
          * Get the value of telefono
          */ 
-        public function getTelefono()
+        public function getTelefono(): string
         {
                 return $this->telefono;
         }
@@ -131,7 +127,7 @@ class Contacto{
          *
          * @return  self
          */ 
-        public function setTelefono($telefono)
+        public function setTelefono(string $telefono)
         {
                 $this->telefono = $telefono;
 
@@ -141,7 +137,7 @@ class Contacto{
         /**
          * Get the value of fecha_nacimiento
          */ 
-        public function getFecha_nacimiento()
+        public function getFecha_nacimiento(): string
         {
                 return $this->fecha_nacimiento;
         }
@@ -151,10 +147,21 @@ class Contacto{
          *
          * @return  self
          */ 
-        public function setFecha_nacimiento($fecha_nacimiento)
+        public function setFecha_nacimiento(?string $fecha_nacimiento)
         {
                 $this->fecha_nacimiento = $fecha_nacimiento;
 
                 return $this;
         }
+
+        /**
+         * Mostrar todos los contactos
+         * 
+         * @return self
+         */
+        public function conseguirTodos() : string
+        {   
+            return "Aquí mostraremos todos los contactos de nuestra agenda";
+        }
+
 }

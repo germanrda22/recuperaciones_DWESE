@@ -1,0 +1,28 @@
+<?php
+
+namespace Controllers;
+use Models\Contacto;
+
+class ContactoController
+{
+
+    public function mostrarTodos()
+    {
+        $contacto = new Contacto();
+        $todos_mis_contactos = $contacto->conseguirTodos();
+        require_once 'views/contacto/mostrar_todos.php';
+    }
+
+    public function crear()
+    {
+        
+    }
+
+    /* public function borrar(){
+
+    } */
+
+    /* public function modificar(){
+
+    } */
+}

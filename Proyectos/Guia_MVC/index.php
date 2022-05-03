@@ -10,13 +10,13 @@
     <h1>Agenda</h1>
     <?php
 
-require_once 'models/Contacto.php';
+require_once 'autoload.php';
+use Controllers\ContactoController;
 use Models\Contacto;
 
-$micontacto = new Contacto('1', 'Ricardo', 'Solano Pérez', 'ric@gmail.com', 'C/ Aguamarina, nº7', '958121212', '1/7/2000');
-$nombrecontacto = $micontacto->getNombre(); // Acceder al nombre del objeto
+$controlador = new ContactoController();
+$controlador->mostrarTodos();
 
-echo "El nombre del contacto es $nombrecontacto";
 ?>
 
 </body>
