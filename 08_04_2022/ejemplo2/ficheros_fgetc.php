@@ -7,7 +7,7 @@
         while(!feof($fich))
         {
             $car = fgetc($fich); //carácter a carácter
-            echo $car;
+            echo $car."<br>";
         }
     }
     fclose($fich);
