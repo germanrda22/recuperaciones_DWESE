@@ -2,10 +2,12 @@
 
 namespace Models;
 
+use Lib\BaseDatos;
 use JetBrains\PhpStorm\Internal\ReturnTypeContract;
 
 class Contacto
 {
+        private BaseDatos $conexion;
         private string $id;
         private string $nombre;
         private string $apellidos;
@@ -14,7 +16,10 @@ class Contacto
         private string $telefono;
         private ?string $fecha_nacimiento;
 
-    
+        public function __construct()
+        {
+            $this->conexion = new BaseDatos();
+        }
 
         /**
          * Get the value of id
@@ -161,9 +166,10 @@ class Contacto
          * 
          * @return self
          */
-        public function conseguirTodos() : string
+        public function conseguirTodos() : array
         {   
-            return "Aquí mostraremos todos los contactos de nuestra agenda";
+            $contactos = [];
+            return $contactos;
         }
 
         public function borrar() : string

@@ -36,6 +36,10 @@ class BaseDatos
 
     public function consulta(string $consultaSQL): void
     {
-
+        $this->resultado = $this->conectar()->query('select * from contactos');
+    }
+    public function extraer_registro()
+    {
+        return ($contact = $this->conexion->extraer_registro())?$contact:null;
     }
 }
