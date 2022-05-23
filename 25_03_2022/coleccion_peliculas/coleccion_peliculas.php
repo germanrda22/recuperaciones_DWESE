@@ -13,9 +13,19 @@ $peliculas =
     ["Capitán América: El Soldado de Invierno", "Anthony y Joe Russo", 2014, "Acción"]
 ];
 
-function listar()
+if(isset($_POST['ordenada']))
 {
-    global $peliculas;
+    listar_ordenado();
+}else if(isset($_POST["busca"]))
+{
+    buscar($_POST['buscar']);
+}else
+{
+    listar($peliculas);
+}
+
+function listar($peliculas)
+{
     echo "<table border=1px solid black>";
     echo "<tr>
         <th>Título</th>
@@ -56,5 +66,3 @@ function buscar($titulo)
     }
     listar($peliculas_buscadas);
 }
-
-buscar("Cap", $peliculas);

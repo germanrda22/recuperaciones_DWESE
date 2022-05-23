@@ -11,11 +11,11 @@
     <form action="coleccion_peliculas.php" method="POST">
         <label for="buscar">Buscar</label>
         <input type="text" name="buscar">
-        <button type="buscar">Buscar</button><br><br>
+        <button type="submit" name="busca">Buscar</button><br><br>
 
-        <button type="completa">Ver lista completa</button><br><br>
+        <button type="submit" name="completa">Ver lista completa</button><br><br>
         
-        <button type="ordenar">Ordenar por título</button>
+        <button type="submit" name="ordenada">Ordenar por título</button>
     </form>
 </body>
 </html>
