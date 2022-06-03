@@ -8,10 +8,15 @@
 </head>
 <body>
     <?php
+        use Models\Carta;
+        use Controllers\FrontController;
         require_once 'autoloader.php';
-        //Ya no necesito poner los siguientes require_once
-        //require_once 'models/'
+        
     ?>
     <a href="views/formularioCarta.php">Mostrar carta</a>
+    <?php
+        require_once './controllers/FrontController.php';
+        FrontController::main();
+    ?>
 </body>
 </html>

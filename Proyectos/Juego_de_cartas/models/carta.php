@@ -12,7 +12,8 @@ class Carta
     function __construct(private int $numero,
                         private string $palo)
     {
-    
+        $this->setNumero($numero);
+        $this->setPalo($palo);
     }
 
     public function getNumero()

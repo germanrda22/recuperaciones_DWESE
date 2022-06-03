@@ -13,7 +13,9 @@ class CartaController
 
     public function mostrarCarta()
     {
-        require_once 'views/mustra_carta.php';
+        $numero = $_POST['numero'];
+        $palo = $_POST['palo'];
+        require_once 'views/muestra_carta.php';
     }
 
     public function nuevaCarta()

@@ -13,7 +13,7 @@
     }
     ?>
     <h1>Indica la carta que deseas crear</h1>
-    <form action="localhost/recuperacionDWESE/Juego_de_cartas/controller/cartaController&" method="POST">
+    <form action="/Proyectos/Juego_de_cartas/index.php?controller=carta&action=nuevaCarta" method="POST"></form>
         <label for="numero">Número</label>
         <select name="numero" id="numero">
             <option <?php if(isset($numero) && $numero == 1) print "selected"?>value="1">1</option>
@@ -36,6 +36,7 @@
             <option <?php if(isset($palo) && $palo == "espadas") print "selected"?>value="espadas">ESPADAS</option>
             <option <?php if(isset($palo) && $palo == "bastos") print "selected"?>value="bastos">BASTOS</option>
         </select><br><br>
+        
         <button type="submit">Enviar</button>
     </form>
 </body>
